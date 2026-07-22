@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio | Venti Amelia - TKJ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* --- RESET & BASIC STYLES --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #0a0a12;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        /* --- NEON COLORS & ANIMATIONS --- */
+        :root {
+            --neon-cyan: #00f3ff;
+            --neon-magenta: #ff007f;
+            --bg-card: #121225;
+        }
+
+        @keyframes neonPulse {
+            0%, 100% {
+                box-shadow: 0 0 15px var(--neon-cyan), 0 0 30px var(--neon-cyan);
+            }
+            50% {
+                box-shadow: 0 0 25px var(--neon-magenta), 0 0 50px var(--neon-magenta);
+            }
+        }
+
+        @keyframes textGlow {
+            0%, 100% {
+                text-shadow: 0 0 10px var(--neon-cyan), 0 0 20px var(--neon-cyan);
+            }
+            50% {
+                text-shadow: 0 0 15px var(--neon-magenta), 0 0 30px var(--neon-magenta);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* --- CONTAINER --- */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .profile-img-container {
+            position: relative;
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            margin-bottom: 25px;
+            animation: neonPulse 4s infinite ease-in-out;
+        }
+
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid var(--neon-cyan);
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            color: #fff;
+            animation: textGlow 3s infinite alternate;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--neon-cyan);
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        /* --- CARDS & SECTIONS --- */
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin: 40px 0 20px;
+            color: var(--neon-cyan);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .card {
+            background: var(--bg-card);
+            border: 1px solid rgba(0, 243, 255, 0.2);
+            padding: 25px;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            animation: float 5s infinite ease-in-out;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--neon-magenta);
+            box-shadow: 0 0 15px rgba(255, 0, 127, 0.4);
+        }
+
+        .card i {
+            font-size: 2rem;
+            color: var(--neon-cyan);
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            color: #a0a0c0;
+            line-height: 1.6;
+        }
+
+        /* --- SOCIAL MEDIA & CONTACT --- */
+        .contact-box {
+            background: var(--bg-card);
+            border: 1px solid var(--neon-cyan);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 0 15px rgba(0, 243, 255, 0.2);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .btn-social {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            color: #fff;
+            background: #1a1a3a;
+            border: 1px solid var(--neon-cyan);
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .btn-social:hover {
+            background: var(--neon-magenta);
+            border-color: var(--neon-magenta);
+            box-shadow: 0 0 15px var(--neon-magenta);
+            transform: scale(1.05);
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            font-size: 0.85rem;
+            color: #606080;
+            border-top: 1px solid #1a1a3a;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <section class="hero">
+            <div class="profile-img-container">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&q=80" alt="Venti Amelia" class="profile-img">
+            </div>
+            <h1>Venti Amelia</h1>
+            <p><i class="fa-solid fa-network-wired"></i> Teknik Komputer & Jaringan</p>
+        </section>
+
+        <h2 class="section-title">Keahlian TKJ</h2>
+        <div class="grid">
+            <div class="card">
+                <i class="fa-solid fa-server"></i>
+                <h3>Administrasi Server</h3>
+                <p>Mampu melakukan konfigurasi dan pengelolaan sistem operasi jaringan baik berbasis Linux maupun Windows Server.</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-wifi"></i>
+                <h3>Instalasi Jaringan</h3>
+                <p>Menguasai perancangan LAN/WAN, crimping kabel UTP, sertikonfigurasi Router Mikrotik dan Switch.</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-shield-halved"></i>
+                <h3>Keamanan Jaringan</h3>
+                <p>Memahami konsep dasar firewall, manajemen bandwidth, serta proteksi jaringan dari ancaman luar.</p>
+            </div>
+        </div>
+
+        <h2 class="section-title">Hubungi Saya</h2>
+        <div class="contact-box">
+            <p>Tertarik untuk bekerja sama atau berdiskusi seputar dunia IT & Jaringan? Silakan hubungi media sosial saya di bawah ini:</p>
+            
+            <div class="social-links">
+                <a href="https://wa.me/087840620711" target="_blank" class="btn-social">
+                    <i class="fa-brands fa-whatsapp"></i> WhatsApp
+                </a>
+                <a href="mailto:ventiamelia@gmail.com" class="btn-social">
+                    <i class="fa-solid fa-envelope"></i> Email
+                </a>
+                <a href="https://www.instagram.com/onlymellzx_?igsh=d3hxa3p5ajJjb2di" target="_blank" class="btn-social">
+                    <i class="fa-brands fa-instagram"></i> Instagram
+                </a>
+                <a href="https://www.tiktok.com/@kepoamathidupnya_?_r=1&_t=ZS-98ErmeyYABF" target="_blank" class="btn-social">
+                    <i class="fa-brands fa-tiktok"></i> TikTok
+                </a>
+                <a href="https://www.facebook.com/share/1BskLhax5c/" target="_blank" class="btn-social">
+                    <i class="fa-brands fa-facebook"></i> Facebook
+                </a>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 Venti Amelia | Designed with Neon Style</p>
+        </footer>
+    </div>
+
+</body>
+</html>
